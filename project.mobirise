@@ -1,0 +1,237 @@
+{
+  "settings": {
+    "name": "Indiva System",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#1e79bd",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#393193",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": true,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#1e79bd"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [],
+    "uniqCompNum": 10,
+    "versionPublish": "5.9.18"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Indiva System",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            ".mbr-description": {
+              "text-align": "left"
+            }
+          },
+          "_name": "image03",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image3\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n    <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"6\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-12 col-lg-{{textWidth}}\">\n        <h4 class=\"mbr-description mbr-fonts-style mb-3 align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-description\"><b>InDiva System — ¿Realmente funciona? Opiniones de usuarios, Precio, Dónde comprar</b></h4>\n        <p class=\"mbr-description mbr-fonts-style mb-4 align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">Si está buscando una solución eficaz para alcanzar sus objetivos de pérdida de peso, probablemente ya se haya encontrado con multitud de opciones en el mercado. Entre estas opciones se encuentra<b> <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a></b>, un suplemento para perder peso que se ha ganado la confianza de muchos consumidores. En este artículo, exploraremos qué hace que el InDiva System sea tan popular y si realmente cumple lo que promete.&nbsp;<br></p>\n        <div class=\"image-wrapper\">\n          <img class=\"w-100\" src=\"@PROJECT_PATH@/assets/images/pak1-5.jpeg\" alt=\"Mobirise Website Builder\">\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "ucNsQ2iAjl",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image03-5"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".mbr-text": {
+              "color": "#000000"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#000000"
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            }
+          },
+          "_name": "article12",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article12\" group=\"Article\">    \n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"9\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style mb-4 mt-0\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-5\"><b>¿Qué es el InDiva System?</b></h3>\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">The storytelling magic of photos\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\">El <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> es un complemento alimenticio diseñado para ayudarle a perder peso. Su fórmula exclusiva combina ingredientes naturales diseñados para acelerar el metabolismo y promover la quema efectiva de grasas.\n<br>\n<br><b>¿Cómo funciona?</b><br><b>\n</b><br>Este sistema adelgazante actúa de varias formas para ayudarle a perder peso. En primer lugar, estimula el metabolismo, haciendo que el cuerpo queme más calorías incluso en reposo. Además, el InDiva System ayuda a suprimir el apetito, reduciendo así la ingesta diaria de calorías.\n<br>\n<br>Se pueden encontrar más detalles en: <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System — página web oficial</a>\n<br>\n<br><b>Beneficios del InDiva System\n</b><br><br><b>Pérdida de peso eficaz\n</b><br>Uno de los principales beneficios reportados por los usuarios del <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> es la pérdida significativa de peso en un corto período de tiempo. Siguiendo las instrucciones de dosificación y combinando el suplemento con una dieta equilibrada y ejercicio regular, muchas personas han logrado resultados impresionantes.\n<br>\n<br><b>Metabolismo acelerado</b><br><b>\n</b><br>El aumento del metabolismo es esencial para quemar grasa de manera eficiente. InDiva System contiene ingredientes que estimulan el metabolismo, ayudando al cuerpo a quemar calorías de forma más rápida y eficaz.\n<br>\n<br><b>Supresión del apetito</b><br><b>\n</b><br>Uno de los mayores retos cuando se intenta perder peso es lidiar con el hambre constante. El InDiva System ayuda a controlar el apetito, reduciendo los antojos de alimentos calóricos y promoviendo una sensación de saciedad durante más tiempo.\n<br>\n<br>Visite la página oficial de ventas de <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> y compruebe la oferta: <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System-Sitio web oficial</a>\n<br>\n<br><b>Componentes del InDiva System</b><br><b>\n</b><br>A diferencia de muchos otros suplementos adelgazantes del mercado, <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> está formulado con ingredientes naturales cuidadosamente seleccionados. Estos ingredientes son seguros y no suponen ningún riesgo para la salud cuando se utilizan según las indicaciones.\n<br>\n<br><b>POLVO DE BROTES DE ESPIRULINA:</b> Reduce el apetito. Aumenta la descomposición de la grasa, ayuda a perder peso.\n<br>\n<br><b>EXTRACTO DE FLOR DE MILENRAMA:</b> Elimina los líquidos del cuerpo. Limpia y fortalece el sistema digestivo, mejorando su funcionamiento.\n<br>\n<br><b>EXTRACTO DE HOJA DE GINSENG:</b> Mejora el funcionamiento del corazón. Normaliza el metabolismo. Influye positivamente en todo el organismo.\n<br>\n<br><b>EXTRACTO DE TALLO DE FUCUS:</b> Aumenta la cantidad de endorfinas y da mucha energía, reduce la adicción a los dulces.\n<br>\n<br><b>Efectos secundarios nocivos</b><br><b>\n</b><br>Muchas personas tienen miedo de probar suplementos adelgazantes debido a los posibles efectos secundarios. Sin embargo, el <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> es conocido por su seguridad y eficacia, y la mayoría de los usuarios afirman no haber experimentado ningún efecto secundario adverso.\n<br>\n<br><b>Instrucciones de dosificación</b><br><b>\n</b><br>Para obtener los mejores resultados del <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a>, es importante seguir las instrucciones de dosificación proporcionadas por el fabricante. En general, se recomienda tomar una cápsula del suplemento dos veces al día, preferiblemente antes de las comidas.\n<br>\n<br>Los resultados de InDiva System pueden maximizarse adoptando hábitos saludables, como una dieta equilibrada y ejercicio regular.\n<br>\n<br><b>Experiencias de los usuarios</b><br><b>\n<br></b>Muchas personas que han utilizado el <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> han compartido sus experiencias positivas en Internet. Desde informes sobre una impresionante pérdida de peso hasta mejoras en la energía y el bienestar general, los testimonios de los usuarios destacan los beneficios de este suplemento adelgazante.</p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "ucNv02bRil",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "article12-7"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".mbr-iconfont": {
+              "margin": "auto",
+              "display": "inline-flex",
+              "font-size": "2rem",
+              "color": "@iconColor",
+              "width": "40px",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".card-title, .iconfont-wrapper": {
+              "color": "#232323"
+            },
+            ".card-text": {
+              "color": "#232323"
+            },
+            ".mbr-section-title": {
+              "color": "#232323",
+              "text-align": "left"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#232323"
+            },
+            ".content-head": {
+              "max-width": "800px"
+            }
+          },
+          "_name": "people02",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"people02\" group=\"People\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n\t\t<select title=\"Columns\" name=\"cardsWidth\">\n\t\t\t<option value=\"6\" selected>2</option>\n\t\t\t<option value=\"4\">3</option>\n\t\t\t<option value=\"3\">4</option>\n\t\t</select>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\">\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showMainSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\n\t\t<header>Card</header>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Name\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Stars\" name=\"showStars\" checked>\n\n\t\t<input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#ffa600\" selected>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row mb-5 justify-content-center\" mbr-if=\"showMainTitle || showMainSubtitle\">\n\t\t\t<div class=\"col-12 content-head\" mbr-class=\"{'col-lg-9': cardsAmount == '3'}\">\n\t\t\t\t<h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showMainTitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\t<b>Testimonials</b>\n\t\t\t\t</h3>\n\t\t\t\t<h5 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-4\" mbr-theme-style=\"display-7\" mbr-if=\"showMainSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\t\tLorem ipsum dolor sit amet nulla vel, consectetur massa adipiscing.\n\t\t\t\t</h5>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{cardsWidth}} mb-5\">\n\t\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t\t<div class=\"card-box align-center\">\n\t\t\t\t\t\t\t<div class=\"iconfont-wrapper mb-3\" mbr-if=\"showStars\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .iconfont-wrapper\">Cuando oí hablar por primera vez de InDiva System, ya pesaba más de 118 kg. ¡Una catástrofe! Nunca tuve que cambiar mi ración: sólo tuve que tomar InDiva System, ¡y adelgacé hasta los 81 kg!</h5>\n\t\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\">\n\t\t\t\t\t\t\t\tAndrés Reyes, 48 años\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{cardsWidth}} mb-5\">\n\t\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t\t<div class=\"card-box align-center\">\n\t\t\t\t\t\t\t<div class=\"iconfont-wrapper mb-3\" mbr-if=\"showStars\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-star mobi-mbri\"></span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<h5 class=\"card-title mbr-fonts-style mb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .iconfont-wrapper\">Después de varios años de dietas, he conseguido perder 28 kg sólo gracias a InDiva System. Ahora estoy delgada, no importa lo que coma, ¡ya hace seis meses que el peso se ha estabilizado!</h5>\n\t\t\t\t\t\t\t<p class=\"card-text mbr-fonts-style mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\">\n\t\t\t\t\t\t\t\tClara Hernández, 52 años\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t</div>\n\t\t<div class=\"row mt-0 mt-md-5\">\n\t\t\t<div class=\"col-12 align-center\" mbr-if=\"showButtons\">\n\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n\t\t\t\t\t<a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Read More</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "ucNyCBX1ux",
+          "_anchor": "people02-8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            ".mbr-description": {
+              "text-align": "left"
+            }
+          },
+          "_name": "image01",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image01\" group=\"Image & Video\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"8\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-12 col-lg-{{textWidth}}\">\n        <div class=\"image-wrapper mb-4\">\n          <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\"><img class=\"w-100\" src=\"@PROJECT_PATH@/assets/images/1-edwvqkz2w-zksnrlx74lkq.webp\" alt=\"Mobirise Website Builder\"></a>\n        </div>\n        <h4 class=\"mbr-description mbr-fonts-style mb-3 align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-description\"><b>¿Cuánto cuesta el InDiva System?</b></h4>\n        <p class=\"mbr-description mbr-fonts-style mb-0 align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">Encontrará el precio más actualizado y fiable en la página oficial del fabricante. Visitar regularmente la web, debido a las frecuentes fluctuaciones de precios derivadas de las promociones, te permitirá recibir información actualizada y beneficiarte de descuentos u ofertas exclusivas.\n<br>\n<br>Visite la página oficial de ventas de <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> y compruebe la oferta:<a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\"> InDiva System-Sitio web oficial</a>\n<br>\n<br><b>¿Se vende el InDiva System en farmacias y dónde comprarlo en España?</b><br><b>\n</b><br>Esta opción no está disponible en farmacias ni en plataformas como Amazon u otros sitios web debido a las falsificaciones. Sólo se puede garantizar la autenticidad a través de la web oficial.\n<br>\n<br>Además, al comprar en la web oficial, puedes beneficiarte de descuentos favorables y de atención al cliente.\n<br>\n<br>Visite la página oficial de ventas de InDiva System y compruebe la oferta:InDiva System-Sitio web oficial\n<br>\n<br><b>InDiva System — ¿Es fiable la compra?</b><br><b>\n<br></b>El proceso de compra es muy fácil y seguro. Tras introducir tu número de teléfono en la página web, el equipo se pondrá en contacto contigo para confirmar tu pedido.\n<br>\n<br>Sin embargo, para ir sobre seguro y garantizarte el producto original, recuerda comprar sólo en la web oficial: <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System — Web oficial</a>\n<br>\n<br><b>Consideraciones finales</b><br><b>\n<br></b>Basándose en las pruebas disponibles y en los informes de usuarios satisfechos, parece claro que el <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> es una opción viable para quienes buscan una ayuda adicional en el proceso de pérdida de peso.\n<br>\n<br>En conclusión, el <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System</a> ofrece un enfoque seguro y eficaz para adelgazar, con beneficios que van más allá de la simple pérdida de peso. Si está buscando una manera de alcanzar sus objetivos de forma sostenible y saludable, este suplemento podría ser una excelente opción.\n<br>\n<br>Recuerda comprar sólo en la web oficial: <a href=\"https://health-good.ru/click/go/902c95b4-c483-4698-b97e-441fd4507bdc.html?subid1=indiva-es-index\" class=\"text-primary\">InDiva System — Web oficial</a><br></p>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "ucNzIc27Op",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image01-9"
+        }
+      ]
+    }
+  }
+}
